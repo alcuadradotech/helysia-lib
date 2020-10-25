@@ -1,0 +1,39 @@
+{
+  "name": "@alcuadradotech/helysia-lib",
+  "version": "0.1.0",
+  "description": "A library to interact with the Helysia Token",
+  "main": "build/helysia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && webpack-dev-server --open",
+    "build": "webpack --mode production",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alcuadradotech/helysia-lib.git"
+  },
+  "keywords": [
+    "token",
+    "payments",
+    "ethereum",
+    "blockchain"
+  ],
+  "author": "Víctor Navarro <vnavarro@alcuadrado.tech>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alcuadradotech/helysia-lib/issues"
+  },
+  "homepage": "https://github.com/alcuadradotech/helysia-lib#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
