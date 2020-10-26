@@ -3,7 +3,7 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@alcuadradotech/helysia-lib.svg)](https://www.npmjs.com/package/@alcuadradotech/helysia-lib)
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@alcuadradotech/helysia-lib.svg)](https://www.npmjs.com/package/@alcuadradotech/helysia-lib)
 
-A ready-to-use set of utilities to interact with the Helysia Token.
+A library to interact with the Helysia Token.
 
 ## Use
 
@@ -93,7 +93,7 @@ See the [build/index.html](build/index.html) file.
 </html>
 ```
 
-## Develop
+## Develop
 
 ```
 npm install
