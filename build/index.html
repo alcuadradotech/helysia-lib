@@ -35,7 +35,7 @@
         button.disabled = true;
         // init the library
         Helysia.init({
-            chainId: 1,  // chainId (1: Main network, 4: Rinkeby)
+            chainId: 4,  // chainId (1: Main network, 4: Rinkeby)
             lang: 'es',  // language
             recipientAccount: "0x4E3DDE4934E3991b6b8226fb591f3FcE43578adc" // 3LY recipient account for payments
         })
@@ -72,9 +72,10 @@
             
             // listen to the click event
             button.addEventListener('click', function () {
+                console.log("Helysia.recipientAccount", Helysia.recipientAccount);
                 // send tokens
                 Helysia
-                .send(Helysia.recipientAccount, amount)
+                .send(amount)
                 .then(function (result) {
                     alert(`SUCCESS\n${result.transactionHash}`)
                 })

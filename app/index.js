@@ -8,7 +8,7 @@ import Helysia from './helysia';
     let _getBalance = async () => Helysia.getBalance();
     let _getEthBalance = async () => Helysia.getEthBalance();
     let _getPrice = async (type, amount) => Helysia.getPrice(type, amount);
-    let send = async (to, amount) => Helysia.send(to, amount);
+    let send = async (amount) => Helysia.send(amount);
     
     window.Helysia = {
         init: _init,

@@ -15,7 +15,7 @@ Helysia.init = async (params) => {
     }
     // setup i18n
     Helysia.i18n = i18n(lang);
-    
+
     // Checking if Web3 has been injected by the browser
     if (typeof ethereum !== "undefined") {
         // Enable to enable the ethereum provider
@@ -56,6 +56,7 @@ Helysia.init = async (params) => {
     adds ? Helysia.adds = adds : Helysia.adds = addresses(chainId.toString());
     // setup recipient account
     Helysia.recipientAccount = recipientAccount;
+
     
     // setup user and token data
     let userAccount, userAccountShort, ethBalance, helysiaBalance,
@@ -100,6 +101,10 @@ Helysia.getAccount = async () => {
     catch (e) { throw e }
     
     return accounts[0];
+}
+
+Helysia.getRecipientAccount = () => {    
+    return Helysia.recipientAccount;
 }
 
 Helysia.getPrice = async (type) => {
@@ -147,8 +152,7 @@ Helysia.getEthBalance = async () => {
     return balance;
 }
 
-
-Helysia.send = async (to, amount) => {
+Helysia.send = async (amount) => {
     let tx;
     try {
         // get account
@@ -158,7 +162,7 @@ Helysia.send = async (to, amount) => {
         // calcualte amount in Wei
         const value = Helysia.web3.utils.toWei(amount);
         // call transfer
-        tx = await tokenContract.methods.transfer(to, value).send({from: from});
+        tx = await tokenContract.methods.transfer(Helysia.recipientAccount, value).send({from: from});
     } catch (error) {
         throw error;
     }

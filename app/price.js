@@ -1,6 +1,6 @@
 "use strict";
 
-export async function getPrice (Helysia, type, amount = "150") {
+export async function getPrice (Helysia, type, amount = "300") {
     let price = 1.321;
     
     if (type === 'CONTRIBUTE') {
@@ -33,7 +33,7 @@ export async function getPrice (Helysia, type, amount = "150") {
         const virtualBalance = new BigNumber(collateralToken[2]);
         // console.log(fromWei(virtualBalance.toFixed()), "collateral.virtualBalance");
         const reserveRatioBN = new BigNumber(collateralToken[3]);
-        // console.log(reserveRatio, "reserveRatio");
+        // console.log(reserveRatioBN.toString(), "reserveRatio");
         const collateral = new BigNumber(toWei(amount));
         const overallBalance = reserveBalanceBN.plus(virtualBalance).plus(collateral);
         // console.log(overallBalance.toFixed(), "overallBalance");
