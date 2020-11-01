@@ -76,7 +76,7 @@ See the [build/index.html](build/index.html) file.
             button.addEventListener('click', function () {
                 // send tokens
                 Helysia
-                .send(Helysia.recipientAccount, amount)
+                .send(amount)
                 .then(function (result) {
                     alert(`SUCCESS\n${result.transactionHash}`)
                 })
